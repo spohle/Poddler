@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EmptyViewController.swift
 //  Poddler
 //
 //  Created by Pohle, Sven on 8/3/18.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class EmptyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.backgroundColor = UIColor.red
     }
-
-
 }
-

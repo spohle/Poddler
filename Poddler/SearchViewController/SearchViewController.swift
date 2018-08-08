@@ -17,7 +17,6 @@ class SearchViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = ColorTheme.searchController.background
         
         setupTableView()
         setupSearchBar()
@@ -27,6 +26,7 @@ class SearchViewController: UITableViewController {
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.separatorColor = .clear
         tableView.register(PoddlerSearchCell.self, forCellReuseIdentifier: podcastsSearchTableCellId)
+        tableView.backgroundColor = UIColor(r: 55, g: 55, b: 55)
     }
     
     func setupSearchBar() {
@@ -39,8 +39,8 @@ class SearchViewController: UITableViewController {
         navigationItem.searchController = searchController
         
         let scb = searchController.searchBar
-        scb.tintColor = UIColor.white
-        scb.barTintColor = UIColor.white
+        // tintcolor is the color of the cancel button and text line
+        scb.tintColor = UIColor.red
         
         if let textfield = scb.value(forKey: "searchField") as? UITextField {
             textfield.textColor = UIColor.blue

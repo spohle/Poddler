@@ -29,6 +29,20 @@ class SearchViewController: UITableViewController {
         tableView.backgroundColor = UIColor(r: 55, g: 55, b: 55)
     }
     
+    func showEmptyMessage(message:String) {
+        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+        let messageLabel = UILabel(frame: rect)
+        messageLabel.text = message
+        messageLabel.textColor = UIColor.lightGray
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = .center
+        messageLabel.font = UIFont(name: "TrebuchetMS", size: 25)
+        messageLabel.sizeToFit()
+        
+        tableView.backgroundView = messageLabel;
+        tableView.separatorStyle = .none
+    }
+    
     func setupSearchBar() {
         self.definesPresentationContext = true
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -53,6 +67,9 @@ class SearchViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if podcasts.count <= 0 {
+            showEmptyMessage(message: "No Podcasts loaded")
+        }
         return podcasts.count
     }
     

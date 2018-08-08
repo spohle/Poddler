@@ -132,15 +132,23 @@
 			children = (
 				F032249821154488005CAAEA /* Models */,
 				F0511A1C211513B80055FACD /* AppDelegate.swift */,
-				F0322490211516E3005CAAEA /* MainViewController */,
+				F0965B53211A9FF600465BC3 /* Controllers */,
 				F0511A23211513B80055FACD /* Assets.xcassets */,
 				F0511A25211513B80055FACD /* LaunchScreen.storyboard */,
 				F0511A28211513B80055FACD /* Info.plist */,
 				F032248F211516D8005CAAEA /* Extensions */,
-				F032249521151AF2005CAAEA /* SearchViewController */,
 				F032249B211544E9005CAAEA /* API */,
 			);
 			path = Poddler;
+			sourceTree = "<group>";
+		};
+		F0965B53211A9FF600465BC3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0322490211516E3005CAAEA /* MainViewController */,
+				F032249521151AF2005CAAEA /* SearchViewController */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

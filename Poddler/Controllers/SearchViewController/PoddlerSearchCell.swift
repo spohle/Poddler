@@ -22,7 +22,7 @@ class PoddlerSearchCell: UITableViewCell {
        let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = UIColor(r: 220, g: 220, b: 220)
-        label.numberOfLines = -1
+//        label.numberOfLines = -1
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -35,6 +35,14 @@ class PoddlerSearchCell: UITableViewCell {
         return label
     }()
     
+    let uiNumberOfEpisodesLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor.orange.withAlphaComponent(0.75 )
+        label.font = UIFont.systemFont(ofSize: 11)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     var podcast:Podcast! {
         didSet {
             let imageUrl = URL(string: podcast.artworkUrl600 ?? "")
@@ -42,6 +50,7 @@ class PoddlerSearchCell: UITableViewCell {
             
             uiTitleLabel.text = podcast.trackName
             uiAuthorLabel.text = podcast.artistName
+            uiNumberOfEpisodesLabel.text = "\(podcast.trackCount!) Episodes"
         }
     }
     
@@ -56,13 +65,19 @@ class PoddlerSearchCell: UITableViewCell {
         uiTitleLabel.topAnchor.constraint(equalTo: uiImageView.topAnchor).isActive = true
         uiTitleLabel.leftAnchor.constraint(equalTo: uiImageView.rightAnchor, constant: 5).isActive = true
         uiTitleLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5).isActive = true
-        uiTitleLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 35).isActive = true
+        uiTitleLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         contentView.addSubview(uiAuthorLabel)
-        uiAuthorLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5).isActive = true
+        uiAuthorLabel.topAnchor.constraint(equalTo: uiTitleLabel.bottomAnchor, constant: -5).isActive = true
         uiAuthorLabel.leftAnchor.constraint(equalTo: uiImageView.rightAnchor, constant: 5).isActive = true
         uiAuthorLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5).isActive = true
         uiAuthorLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        
+        contentView.addSubview(uiNumberOfEpisodesLabel)
+        uiNumberOfEpisodesLabel.topAnchor.constraint(equalTo: uiAuthorLabel.bottomAnchor, constant: -5).isActive = true
+        uiNumberOfEpisodesLabel.leftAnchor.constraint(equalTo: uiImageView.rightAnchor, constant: 5).isActive = true
+        uiNumberOfEpisodesLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5).isActive = true
+        uiNumberOfEpisodesLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

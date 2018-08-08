@@ -9,10 +9,10 @@
 import UIKit
 
 struct ColorTheme {
-    static let tabBarTintColor = UIColor(r: 0, g: 110, b: 153)
+    static let tabBarTintColor = UIColor(r: 20, g: 20, b: 20)
     
     struct searchController {
-        static let background = UIColor(r: 60, g: 60, b: 60)
+        static let background = UIColor(r: 240, g: 240, b: 240)
         static let overlayColor = UIColor(r: 40, g: 40, b: 40)
         static let overlayTextColor = UIColor(r: 240, g: 240, b: 240)
     }

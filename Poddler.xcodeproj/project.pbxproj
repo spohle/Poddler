@@ -11,11 +11,13 @@
 		F032248A21151612005CAAEA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F032248921151612005CAAEA /* MainViewController.swift */; };
 		F032248C211516B3005CAAEA /* UIColor_ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F032248B211516B3005CAAEA /* UIColor_ext.swift */; };
 		F032248E211516CC005CAAEA /* UIImage_ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F032248D211516CC005CAAEA /* UIImage_ext.swift */; };
-		F03224922115181A005CAAEA /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03224912115181A005CAAEA /* EmptyViewController.swift */; };
 		F032249421151AEB005CAAEA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F032249321151AEB005CAAEA /* SearchViewController.swift */; };
+		F0322497211543BC005CAAEA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0322496211543BC005CAAEA /* Network.swift */; };
+		F032249A21154492005CAAEA /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F032249921154492005CAAEA /* Podcast.swift */; };
 		F0511A1D211513B80055FACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0511A1C211513B80055FACD /* AppDelegate.swift */; };
 		F0511A24211513B80055FACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0511A23211513B80055FACD /* Assets.xcassets */; };
 		F0511A27211513B80055FACD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0511A25211513B80055FACD /* LaunchScreen.storyboard */; };
+		F0965B52211A670E00465BC3 /* PoddlerSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0965B51211A670E00465BC3 /* PoddlerSearchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,13 +27,15 @@
 		F032248921151612005CAAEA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F032248B211516B3005CAAEA /* UIColor_ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_ext.swift; sourceTree = "<group>"; };
 		F032248D211516CC005CAAEA /* UIImage_ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage_ext.swift; sourceTree = "<group>"; };
-		F03224912115181A005CAAEA /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		F032249321151AEB005CAAEA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F0322496211543BC005CAAEA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		F032249921154492005CAAEA /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		F0511A19211513B80055FACD /* Poddler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poddler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0511A1C211513B80055FACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0511A23211513B80055FACD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0511A26211513B80055FACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0511A28211513B80055FACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0965B51211A670E00465BC3 /* PoddlerSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoddlerSearchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				F032248921151612005CAAEA /* MainViewController.swift */,
-				F03224912115181A005CAAEA /* EmptyViewController.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -85,8 +88,25 @@
 			isa = PBXGroup;
 			children = (
 				F032249321151AEB005CAAEA /* SearchViewController.swift */,
+				F0965B51211A670E00465BC3 /* PoddlerSearchCell.swift */,
 			);
 			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		F032249821154488005CAAEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F032249921154492005CAAEA /* Podcast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F032249B211544E9005CAAEA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F0322496211543BC005CAAEA /* Network.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		F0511A10211513B80055FACD = {
@@ -110,6 +130,7 @@
 		F0511A1B211513B80055FACD /* Poddler */ = {
 			isa = PBXGroup;
 			children = (
+				F032249821154488005CAAEA /* Models */,
 				F0511A1C211513B80055FACD /* AppDelegate.swift */,
 				F0322490211516E3005CAAEA /* MainViewController */,
 				F0511A23211513B80055FACD /* Assets.xcassets */,
@@ -117,6 +138,7 @@
 				F0511A28211513B80055FACD /* Info.plist */,
 				F032248F211516D8005CAAEA /* Extensions */,
 				F032249521151AF2005CAAEA /* SearchViewController */,
+				F032249B211544E9005CAAEA /* API */,
 			);
 			path = Poddler;
 			sourceTree = "<group>";
@@ -197,12 +219,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Poddler/Pods-Poddler-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
@@ -238,9 +262,11 @@
 			files = (
 				F032249421151AEB005CAAEA /* SearchViewController.swift in Sources */,
 				F032248A21151612005CAAEA /* MainViewController.swift in Sources */,
+				F0965B52211A670E00465BC3 /* PoddlerSearchCell.swift in Sources */,
 				F032248C211516B3005CAAEA /* UIColor_ext.swift in Sources */,
-				F03224922115181A005CAAEA /* EmptyViewController.swift in Sources */,
 				F032248E211516CC005CAAEA /* UIImage_ext.swift in Sources */,
+				F0322497211543BC005CAAEA /* Network.swift in Sources */,
+				F032249A21154492005CAAEA /* Podcast.swift in Sources */,
 				F0511A1D211513B80055FACD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
